@@ -1,42 +1,31 @@
 `timescale 1ns / 1ps
 
-module top(
-    input [15:0] SW,
-    input [15:0] LED
-    );
-    
-assign LED[0] = SW[0] & SW[1];
-assign LED[2] = SW[2] | SW[3];
-assign LED[4] = SW[4] ^ SW[5];
-assign LED[10:6] = ~SW[10:6];
-assign LED[13:11] = {SW[11], SW[12], SW[13]};
-assign LED[15:14] = { 2{SW[14]} };
-
-//    input       clk,
-//    input       a,
-//    input       b,
-//    output reg  q   );
-
-//wire c;
-
-//assign c = a ^ b;
-
-//always @(posedge clk) begin
-//    q <= c;
-//end
+module segment7 (input logic [3:0] in, output logic [6:0] out);
+    always @* begin
+        case(in[3:0])
+            4'd0: out <= 7'b0001000;
+            4'd1: out <= 7'b1011011;            
+        endcase
+    end
 endmodule
 
-
-//module basic(
-//    input [15:0] SW,
-//    input [15:0] LED
-//    );
+module top(
+    input logic [3:0] SW,
+    output logic [7:0] AN,
+    output logic CA,
+    output logic CB,
+    output logic CF,
+    output logic CG,
+    output logic CE,
+    output logic CD,
+    output logic CC
+    );
     
-//assign LED[0] = SW[0] & SW[1];
-//assign LED[2] = SW[2] | SW[3];
-//assign LED[4] = SW[4] ^ SW[5];
-//assign LED[10:6] = ~SW[10:6];
-//assign LED[13:11] = {SW[11], SW[12], SW[13]};
-//assign LED[15:14] = { 2{SW[14]} };
+    logic [6:0] c;
+    assign c = {CA,CB,CF,CG,CC,CE,CD};
+    assign AN[0] = 0;
+    assign AN[7:1] = {7{1'b1}};
+    segment7 s0(.in(SW), .out(c));
+    
+endmodule
 
-//endmodule 

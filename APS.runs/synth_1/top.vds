@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Mon Sep 12 15:23:43 2022
-# Process ID: 1272
+# Start of session at: Mon Sep 12 16:19:41 2022
+# Process ID: 6592
 # Current directory: C:/Users/8200464.SIPC/Desktop/APS/APS.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: C:/Users/8200464.SIPC/Desktop/APS/APS.runs/synth_1/top.vds
@@ -16,84 +16,174 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7732 
+INFO: Helper process launched with PID 13528 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 978.984 ; gain = 233.809
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 979.266 ; gain = 234.875
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-WARNING: [Synth 8-6104] Input port 'LED' has an internal driver [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:8]
-WARNING: [Synth 8-6104] Input port 'LED' has an internal driver [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:9]
-WARNING: [Synth 8-6104] Input port 'LED' has an internal driver [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:10]
-WARNING: [Synth 8-6104] Input port 'LED' has an internal driver [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:11]
-WARNING: [Synth 8-6104] Input port 'LED' has an internal driver [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:12]
-WARNING: [Synth 8-6104] Input port 'LED' has an internal driver [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:13]
-INFO: [Synth 8-6155] done synthesizing module 'top' (1#1) [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-WARNING: [Synth 8-3331] design top has unconnected port SW[15]
-WARNING: [Synth 8-3331] design top has unconnected port LED[5]
-WARNING: [Synth 8-3331] design top has unconnected port LED[3]
-WARNING: [Synth 8-3331] design top has unconnected port LED[1]
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:12]
+INFO: [Synth 8-6157] synthesizing module 'segment7' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:5]
+INFO: [Synth 8-6155] done synthesizing module 'segment7' (1#1) [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
+WARNING: [Synth 8-3848] Net CA in module/entity top does not have driver. [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:15]
+WARNING: [Synth 8-3848] Net CB in module/entity top does not have driver. [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:16]
+WARNING: [Synth 8-3848] Net CF in module/entity top does not have driver. [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:17]
+WARNING: [Synth 8-3848] Net CG in module/entity top does not have driver. [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:18]
+WARNING: [Synth 8-3848] Net CE in module/entity top does not have driver. [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:19]
+WARNING: [Synth 8-3848] Net CD in module/entity top does not have driver. [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:20]
+WARNING: [Synth 8-3848] Net CC in module/entity top does not have driver. [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:21]
+INFO: [Synth 8-6155] done synthesizing module 'top' (2#1) [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:12]
+WARNING: [Synth 8-3917] design top has port AN[7] driven by constant 1
+WARNING: [Synth 8-3917] design top has port AN[6] driven by constant 1
+WARNING: [Synth 8-3917] design top has port AN[5] driven by constant 1
+WARNING: [Synth 8-3917] design top has port AN[4] driven by constant 1
+WARNING: [Synth 8-3917] design top has port AN[3] driven by constant 1
+WARNING: [Synth 8-3917] design top has port AN[2] driven by constant 1
+WARNING: [Synth 8-3917] design top has port AN[1] driven by constant 1
+WARNING: [Synth 8-3917] design top has port AN[0] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1052.426 ; gain = 307.250
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1052.105 ; gain = 307.715
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED[15] with 1st driver pin 'LED[15]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED[15] with 2nd driver pin 'SW[14]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED[15] with 3rd driver pin 'LED[14]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin SW[13] with 1st driver pin 'SW[13]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin SW[13] with 2nd driver pin 'LED[11]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin SW[12] with 1st driver pin 'SW[12]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin SW[12] with 2nd driver pin 'LED[12]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin SW[11] with 1st driver pin 'SW[11]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin SW[11] with 2nd driver pin 'LED[13]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
 
 Report Check Netlist: 
 +------+------------------+-------+---------+-------+------------------+
 |      |Item              |Errors |Warnings |Status |Description       |
 +------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        4|Failed |Multi driven nets |
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1052.426 ; gain = 307.250
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1052.105 ; gain = 307.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1052.426 ; gain = 307.250
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1052.105 ; gain = 307.715
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1052.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1052.105 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc]
+CRITICAL WARNING: [Designutils 20-1307] Command 'Switches' is not supported in the xdc constraint file. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:11]
+WARNING: [Vivado 12-584] No ports matched 'SW[4]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[5]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[6]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[7]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[8]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[9]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[10]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[11]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[12]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[13]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[14]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[15]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Designutils 20-1307] Command 'LEDs' is not supported in the xdc constraint file. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Designutils 20-970] Unrecognized or unsupported command '7 segment display' found in constraint file. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:55]
+WARNING: [Vivado 12-584] No ports matched 'DP'. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/8200464.SIPC/Desktop/APS/Nexys-A7-100T-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1074.973 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1096.035 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1074.973 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1096.035 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1074.973 ; gain = 329.797
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1096.035 ; gain = 351.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1074.973 ; gain = 329.797
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1096.035 ; gain = 351.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1074.973 ; gain = 329.797
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1096.035 ; gain = 351.645
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'out_reg' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:6]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1074.973 ; gain = 329.797
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1096.035 ; gain = 351.645
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -105,8 +195,8 @@ Report RTL Partitions:
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -114,10 +204,10 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module top 
+Module segment7 
 Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -134,28 +224,24 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design top has unconnected port SW[15]
-WARNING: [Synth 8-3331] design top has unconnected port LED[5]
-WARNING: [Synth 8-3331] design top has unconnected port LED[3]
-WARNING: [Synth 8-3331] design top has unconnected port LED[1]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED[10] with 1st driver pin 'i_0/p_0_out[4]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:11]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED[10] with 2nd driver pin 'LED[10]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED[9] with 1st driver pin 'i_0/p_0_out[3]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:11]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED[9] with 2nd driver pin 'LED[9]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED[8] with 1st driver pin 'i_0/p_0_out[2]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:11]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED[8] with 2nd driver pin 'LED[8]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED[7] with 1st driver pin 'i_0/p_0_out[1]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:11]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED[7] with 2nd driver pin 'LED[7]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED[6] with 1st driver pin 'i_0/p_0_out[0]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:11]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED[6] with 2nd driver pin 'LED[6]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED[4] with 1st driver pin 'i_1/p_0_out' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:10]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED[4] with 2nd driver pin 'LED[4]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED[2] with 1st driver pin 'i_2/p_0_out' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:9]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED[2] with 2nd driver pin 'LED[2]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED[0] with 1st driver pin 'i_3/p_0_out' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:8]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin LED[0] with 2nd driver pin 'LED[0]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
+WARNING: [Synth 8-3917] design top has port AN[7] driven by constant 1
+WARNING: [Synth 8-3917] design top has port AN[6] driven by constant 1
+WARNING: [Synth 8-3917] design top has port AN[5] driven by constant 1
+WARNING: [Synth 8-3917] design top has port AN[4] driven by constant 1
+WARNING: [Synth 8-3917] design top has port AN[3] driven by constant 1
+WARNING: [Synth 8-3917] design top has port AN[2] driven by constant 1
+WARNING: [Synth 8-3917] design top has port AN[1] driven by constant 1
+WARNING: [Synth 8-3917] design top has port AN[0] driven by constant 0
+INFO: [Synth 8-3886] merging instance 's0/out_reg[2]' (LD) to 's0/out_reg[5]'
+INFO: [Synth 8-3886] merging instance 's0/out_reg[0]' (LD) to 's0/out_reg[6]'
+INFO: [Synth 8-3886] merging instance 's0/out_reg[1]' (LD) to 's0/out_reg[6]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\s0/out_reg[3] )
+INFO: [Synth 8-3886] merging instance 's0/out_reg[4]' (LD) to 's0/out_reg[6]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\s0/out_reg[5] )
+WARNING: [Synth 8-3332] Sequential element (s0/out_reg[5]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (s0/out_reg[3]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1074.973 ; gain = 329.797
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1096.035 ; gain = 351.645
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -167,13 +253,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1110.555 ; gain = 365.379
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1129.730 ; gain = 385.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1110.555 ; gain = 365.379
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1129.730 ; gain = 385.340
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -185,7 +271,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1120.082 ; gain = 374.906
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1139.262 ; gain = 394.871
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -208,23 +294,14 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-5753] loadless multi-driven net LED[15] with 1st driver pin 'LED[15]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-WARNING: [Synth 8-5753] loadless multi-driven net SW[14] with 2nd driver pin 'SW[14]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-WARNING: [Synth 8-5753] loadless multi-driven net LED[14] with 3rd driver pin 'LED[14]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-WARNING: [Synth 8-5753] loadless multi-driven net SW[13] with 1st driver pin 'SW[13]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-WARNING: [Synth 8-5753] loadless multi-driven net LED[11] with 2nd driver pin 'LED[11]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-WARNING: [Synth 8-5753] loadless multi-driven net SW[12] with 1st driver pin 'SW[12]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-WARNING: [Synth 8-5753] loadless multi-driven net LED[12] with 2nd driver pin 'LED[12]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-WARNING: [Synth 8-5753] loadless multi-driven net SW[11] with 1st driver pin 'SW[11]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
-WARNING: [Synth 8-5753] loadless multi-driven net LED[13] with 2nd driver pin 'LED[13]' [C:/Users/8200464.SIPC/Desktop/APS/APS.srcs/sources_1/new/top.sv:3]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1134.949 ; gain = 389.773
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1154.066 ; gain = 409.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1134.949 ; gain = 389.773
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1154.066 ; gain = 409.676
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -243,25 +320,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1134.949 ; gain = 389.773
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1154.066 ; gain = 409.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1134.949 ; gain = 389.773
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1154.066 ; gain = 409.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1134.949 ; gain = 389.773
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1154.066 ; gain = 409.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1134.949 ; gain = 389.773
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1154.066 ; gain = 409.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -274,38 +351,46 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+-+-----+------+
-| |Cell |Count |
-+-+-----+------+
-+-+-----+------+
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT3 |     1|
+|2     |LD   |     1|
+|3     |IBUF |     4|
+|4     |OBUF |    15|
++------+-----+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |     0|
-+------+---------+-------+------+
++------+---------+---------+------+
+|      |Instance |Module   |Cells |
++------+---------+---------+------+
+|1     |top      |         |    21|
+|2     |  s0     |segment7 |     2|
++------+---------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1134.949 ; gain = 389.773
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1154.066 ; gain = 409.676
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 16 critical warnings and 13 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1134.949 ; gain = 367.227
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1134.949 ; gain = 389.773
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1154.066 ; gain = 365.746
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1154.066 ; gain = 409.676
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1134.949 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1160.559 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1157.441 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1173.504 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 1 instances were transformed.
+  LD => LDCE: 1 instance 
 
 INFO: [Common 17-83] Releasing license: Synthesis
-12 Infos, 23 Warnings, 25 Critical Warnings and 0 Errors encountered.
+23 Infos, 55 Warnings, 32 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1157.441 ; gain = 719.625
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1157.441 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1173.504 ; gain = 734.879
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1173.504 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/8200464.SIPC/Desktop/APS/APS.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Sep 12 15:24:26 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Sep 12 16:20:13 2022...
