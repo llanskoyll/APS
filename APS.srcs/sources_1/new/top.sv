@@ -32,22 +32,70 @@ module ALU #(int N = 32)(
     
 always_comb begin : ALU
     case(ALUControl[4:0])
-        SUM : Result = A + (ALUControl[3] ? ~B : B);
-        SUB : Result = A - B;
-        SLL : Result = A << B;
-        SLT : Result = $signed(A<B);
-        SLTU : Result = A < B;
-        XOR : Result = A ^ B;
-        SRL : Result = A >> B;
-        SRA : Result = $signed(A) >>> B;
-        OR : Result = A | B;
-        AND : Result = A & B;
-        BEQ : Result = (Flag = (A == B));
-        BNE : Result = (Flag = ( A != B));
-        BLT : Result = (Flag = $signed(A<B));
-        BGE : Result = (Flag = $signed(A >= B));
-        BLTU : Result = (Flag = (A < B));
-        BGEU : Result = (Flag = (A >= B));
+        SUM : begin
+        Result = A + (ALUControl[3] ? ~B : B);
+        Flag = 0;
+        end
+        SUB : begin 
+        Result = A - B;
+        Flag = 0;
+        end
+        SLL : begin 
+        Result = A << B;
+        Flag = 0;
+        end
+        SLT : begin 
+        Result = $signed(A<B);
+        Flag = 0;
+        end
+        SLTU : begin
+        Result = A < B;
+        Flag = 0;
+        end
+        XOR : begin
+        Result = A ^ B;
+        Flag = 0;
+        end
+        SRL : begin 
+        Result = A >> B;
+        Flag = 0;
+        end
+        SRA : begin 
+        Result = $signed(A) >>> B;
+        Flag = 0;
+        end
+        OR : begin
+        Result = A | B;
+        Flag = 0;
+        end
+        AND : begin
+        Result = A & B;
+        Flag = 0;
+        end
+        BEQ : begin
+        Result = 0; 
+        Flag = (A == B);
+        end
+        BNE : begin 
+        Flag = ( A != B);
+        Result = 0;
+        end
+        BLT : begin 
+        Flag = $signed(A<B);
+        Result = 0;
+        end
+        BGE : begin 
+        Flag = $signed(A >= B);
+        Result = 0;
+        end
+        BLTU : begin 
+        Flag = (A < B);
+        Result = 0;
+        end
+        BGEU : begin 
+        Result = (Flag = (A >= B));
+        Result = 0;
+        end
     endcase
 end
 endmodule
