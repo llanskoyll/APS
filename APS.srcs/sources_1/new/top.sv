@@ -20,7 +20,7 @@ package ALUOps;
         BGEU = 5'b1_1_111
     } ALOop;  
 endpackage
-module ALU #(int N = 32)(
+module ALU #(parameter N=32)(
        input logic [N-1:0] A,
        input logic [N-1:0] B,
        input logic [4:0] ALUControl,
