@@ -11,7 +11,6 @@ logic [N-1:0]   WD3;
 logic           we;
 logic [N-1:0]   RD1;
 logic [N-1:0]   RD2;
-logic [N-1:0]   rd;
 
 parameter PERIOD = 10;
 
