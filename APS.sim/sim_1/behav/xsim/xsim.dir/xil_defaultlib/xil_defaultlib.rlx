@@ -4,6 +4,9 @@ Nov  6 2019
 21:57:16
 C:/Users/8200464/Desktop/APS/APS.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
 C:/Users/8200464/Desktop/APS/APS.srcs/sim_1/new/Register_file_testbanch.sv,1664201261,systemVerilog,,,,test_banch_reg_file,,,,,,,,
+C:/Users/8200464/Desktop/APS/APS.srcs/sim_1/new/process_bench.sv,1665410712,systemVerilog,,,,process_bench,,,,,,,,
 C:/Users/8200464/Desktop/APS/APS.srcs/sim_1/new/test_banch.sv,1664196125,systemVerilog,,,,test_banch,,,,,,,,
-C:/Users/8200464/Desktop/APS/APS.srcs/sources_1/new/REG_FILE.sv,1664199646,systemVerilog,,C:/Users/8200464/Desktop/APS/APS.srcs/sim_1/new/Register_file_testbanch.sv,,REG_FILE,,,,,,,,
-C:/Users/8200464/Desktop/APS/APS.srcs/sources_1/new/top.sv,1664195526,systemVerilog,C:/Users/8200464/Desktop/APS/APS.srcs/sim_1/new/test_banch.sv,C:/Users/8200464/Desktop/APS/APS.srcs/sim_1/new/test_banch.sv,,ALU;ALUOps,,,,,,,,
+C:/Users/8200464/Desktop/APS/APS.srcs/sources_1/new/REG_FILE.sv,1664199646,systemVerilog,,C:/Users/8200464/Desktop/APS/APS.srcs/sources_1/new/irom.sv,,REG_FILE,,,,,,,,
+C:/Users/8200464/Desktop/APS/APS.srcs/sources_1/new/irom.sv,1665407484,systemVerilog,,C:/Users/8200464/Desktop/APS/APS.srcs/sources_1/new/processor.sv,,irom,,,,,,,,
+C:/Users/8200464/Desktop/APS/APS.srcs/sources_1/new/processor.sv,1665410587,systemVerilog,,C:/Users/8200464/Desktop/APS/APS.srcs/sources_1/new/top.sv,,processor,,,,,,,,
+C:/Users/8200464/Desktop/APS/APS.srcs/sources_1/new/top.sv,1664195526,systemVerilog,C:/Users/8200464/Desktop/APS/APS.srcs/sim_1/new/test_banch.sv,C:/Users/8200464/Desktop/APS/APS.srcs/sim_1/new/process_bench.sv,,ALU;ALUOps,,,,,,,,

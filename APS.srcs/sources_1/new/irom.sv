@@ -4,6 +4,7 @@ module irom #(
     int WIDTH = 32,
     int DEPTH = 64
 ) (
+    input       clk,
     input logic [$clog2(DEPTH) - 1:0] A,
     output logic [WIDTH-1:0] D
 );
