@@ -22,7 +22,7 @@ module processor(
     .A2(instruct[17:13]),
     .A3(instruct[4:0]),
     .WD3(writeData),
-    .we(instruct[29] | instruct[28]),
+    .we((instruct[29] | instruct[28]) & rst),
     .RD1(oper1),
     .RD2(oper2)    
     );
@@ -44,7 +44,7 @@ module processor(
     always_comb begin
         case(instruct[29:28])
             2'd1: writeData <= IN;
-            2'd2: writeData <= {{9{instruct[27]}},instruct[27:5]};
+            2'd2: writeData <= {{24{instruct[12]}},instruct[12:5]};
             2'd3: writeData <=  ALUResult;
             default: writeData <= 0;
         endcase

@@ -42,7 +42,7 @@ processor dut(
 
 
 initial begin
-    in = 0;
+    in = 32'd4;
     rst = 0;
     #100;
     rst = 1;

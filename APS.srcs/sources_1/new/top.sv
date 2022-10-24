@@ -7,11 +7,11 @@ package ALUOps;
         SLL = 5'b0_0_001,
         SLT = 5'b0_0_010,
         SLTU = 5'b0_0_011,
-        XOR = 5'b0_0_100,
+        XOR_ = 5'b0_0_100,
         SRL = 5'b0_0_101,
         SRA = 5'b0_1_101,
-        OR = 5'b0_0_110,
-        AND = 5'b0_0_111,
+        OR_ = 5'b0_0_110,
+        AND_ = 5'b0_0_111,
         BEQ = 5'b1_1_000,
         BNE = 5'b1_1_001,
         BLT = 5'b1_1_100,
@@ -52,7 +52,7 @@ always_comb begin : ALU
         Result = A < B;
         Flag = 0;
         end
-        XOR : begin
+        XOR_ : begin
         Result = A ^ B;
         Flag = 0;
         end
@@ -64,11 +64,11 @@ always_comb begin : ALU
         Result = $signed(A) >>> B;
         Flag = 0;
         end
-        OR : begin
+        OR_ : begin
         Result = A | B;
         Flag = 0;
         end
-        AND : begin
+        AND_ : begin
         Result = A & B;
         Flag = 0;
         end

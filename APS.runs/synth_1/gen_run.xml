@@ -1,13 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1664194797">
-  <File Type="PA-TCL" Name="ALU.tcl"/>
-  <File Type="REPORTS-TCL" Name="ALU_reports.tcl"/>
-  <File Type="RDS-RDS" Name="ALU.vds"/>
-  <File Type="RDS-UTIL" Name="ALU_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="ALU_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="ALU.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1666623766">
+  <File Type="PA-TCL" Name="Lab2.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Lab2_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Lab2_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Lab2.vds"/>
+  <File Type="RDS-UTIL" Name="Lab2_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Lab2_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Lab2.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Lab2_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Lab2_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/REG_FILE.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/irom.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/processor.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/top.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -15,7 +39,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/Register_file.sv">
+    <File Path="$PSRCDIR/sources_1/new/Lab2.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/display.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -23,10 +54,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSIMDIR/sim_1/behav/xsim/irom.mem">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="ALU"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="Lab2"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

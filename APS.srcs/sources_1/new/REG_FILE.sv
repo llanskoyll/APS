@@ -13,8 +13,8 @@ module REG_FILE#(parameter N=32)(
     
     reg[N-1:0] RAM [0:N-1];
     
-    assign RD1 = (A1 != 0) ? RAM[A1] : 32'b0;
-    assign RD2 = (A2 != 0) ? RAM[A2] : 32'b0;
+    assign RD1 = (A1==0) ? 32'b0 : RAM[A1];
+    assign RD2 = (A2==0) ? 32'b0 : RAM[A2];
     
     always_ff @(posedge clk) begin
         if(we) RAM[A3] <= WD3;
