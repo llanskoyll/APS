@@ -2,16 +2,16 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun Nov  6 19:32:47 2022
-# Process ID: 6988
+# Start of session at: Sun Nov  6 14:54:12 2022
+# Process ID: 12244
 # Current directory: C:/Users/12345/Desktop/APS/APS
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4236 C:\Users\12345\Desktop\APS\APS\APS.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10952 C:\Users\12345\Desktop\APS\APS\APS.xpr
 # Log file: C:/Users/12345/Desktop/APS/APS/vivado.log
 # Journal file: C:/Users/12345/Desktop/APS/APS\vivado.jou
 #-----------------------------------------------------------
-start_gui
-open_project C:/Users/12345/Desktop/APS/APS/APS.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/8200464.SIPC/Desktop/APS' since last save.
+start_gexit
+INFO: [Common 17-206] Exiting Vivado at Sun Nov  6 14:55:46 2022...
+13] Project file moved from 'C:/Users/8200464.SIPC/Desktop/APS' since last save.
 Scanning sources...
 Finished scanning sources
 CRITICAL WARNING: [Project 1-505] Unrecognized Option Name DcpsUptoDate
@@ -19,42 +19,56 @@ WARNING: [Project 1-231] Project 'APS.xpr' was created with a future version and
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado_miet/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 665.258 ; gain = 69.930
 update_compile_order -fileset sources_1
-save_project_as APS_PREF_VERSION C:/Users/12345/Desktop/APS/APS/APS_PREF_VERSION -force
-save_project_as: Time (s): cpu = 00:00:18 ; elapsed = 00:00:08 . Memory (MB): peak = 695.801 ; gain = 10.996
-add_files -norecurse C:/Users/12345/Desktop/APS/APS/APS_PREF_VERSION/APS_PREF_VERSION.srcs/sources_1/new/decoder_riscv.sv
+save_project_as APS_save_project C:/Users/12345/Desktop/APS/APS_save_project -force
+save_project_as: Time (s): cpu = 00:00:25 ; elapsed = 00:00:11 . Memory (MB): peak = 757.734 ; gain = 0.000
+close [ open C:/Users/12345/Desktop/APS/APS_save_project/APS_save_project.srcs/sources_1/new/decoder_riscv.sv w ]
+add_files C:/Users/12345/Desktop/APS/APS_save_project/APS_save_project.srcs/sources_1/new/decoder_riscv.sv
 update_compile_order -fileset sources_1
 set_property top decoder_riscv [current_fileset]
 update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
 set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse {C:/Users/12345/Desktop/APS/APS/APS_PREF_VERSION/APS_PREF_VERSION.srcs/sim_1/new/tb_decoder_riscv_obf.v C:/Users/12345/Desktop/APS/APS/APS_PREF_VERSION/APS_PREF_VERSION.srcs/sim_1/new/defines_riscv.v}
+close [ open C:/Users/12345/Desktop/APS/APS_save_project/APS_save_project.srcs/sim_1/new/defines_riscv.v w ]
+add_files -fileset sim_1 C:/Users/12345/Desktop/APS/APS_save_project/APS_save_project.srcs/sim_1/new/defines_riscv.v
+close [ open C:/Users/12345/Desktop/APS/APS_save_project/APS_save_project.srcs/sim_1/new/tb_decoder_riscv_obf.v w ]
+add_files -fileset sim_1 C:/Users/12345/Desktop/APS/APS_save_project/APS_save_project.srcs/sim_1/new/tb_decoder_riscv_obf.v
 update_compile_order -fileset sim_1
 set_property top tb_decoder_riscv_obf [get_filesets sim_1]
 set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property top decoder_riscv [current_fileset]
 update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
 launch_simulation
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12345/Desktop/APS/APS/APS_PREF_VERSION/APS_PREF_VERSION.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/12345/Desktop/APS/APS_save_project/APS_save_project.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [SIM-utils-54] Inspecting design source files for 'tb_decoder_riscv_obf' in fileset 'sim_1'...
-INFO: [SIM-utils-43] Exported 'C:/Users/12345/Desktop/APS/APS/APS_PREF_VERSION/APS_PREF_VERSION.sim/sim_1/behav/xsim/irom.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/12345/Desktop/APS/APS_save_project/APS_save_project.sim/sim_1/behav/xsim/irom.mem'
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12345/Desktop/APS/APS/APS_PREF_VERSION/APS_PREF_VERSION.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/12345/Desktop/APS/APS_save_project/APS_save_project.sim/sim_1/behav/xsim'
 "xvlog --incr --relax -prj tb_decoder_riscv_obf_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/12345/Desktop/APS/APS/APS_PREF_VERSION/APS_PREF_VERSION.srcs/sources_1/new/decoder_riscv.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/12345/Desktop/APS/APS_save_project/APS_save_project.srcs/sources_1/new/decoder_riscv.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module decoder_riscv
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12345/Desktop/APS/APS/APS_PREF_VERSION/APS_PREF_VERSION.srcs/sim_1/new/tb_decoder_riscv_obf.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12345/Desktop/APS/APS_save_project/APS_save_project.srcs/sim_1/new/tb_decoder_riscv_obf.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_decoder_riscv_obf
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12345/Desktop/APS/APS/APS_PREF_VERSION/APS_PREF_VERSION.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/12345/Desktop/APS/APS_save_project/APS_save_project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12345/Desktop/APS/APS/APS_PREF_VERSION/APS_PREF_VERSION.sim/sim_1/behav/xsim'
-"xelab -wto 780a3f72d4884027aec0f02d56888b1b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_decoder_riscv_obf_behav xil_defaultlib.tb_decoder_riscv_obf xil_defaultlib.glbl -log elaborate.log"
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/12345/Desktop/APS/APS_save_project/APS_save_project.sim/sim_1/behav/xsim'
+"xelab -wto 4d70e2e724ef4b5783e9e695f56ee5b2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_decoder_riscv_obf_behav xil_defaultlib.tb_decoder_riscv_obf xil_defaultlib.glbl -log elaborate.log"
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: D:/Vivado_miet/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 780a3f72d4884027aec0f02d56888b1b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_decoder_riscv_obf_behav xil_defaultlib.tb_decoder_riscv_obf xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Vivado_miet/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 4d70e2e724ef4b5783e9e695f56ee5b2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_decoder_riscv_obf_behav xil_defaultlib.tb_decoder_riscv_obf xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -72,13 +86,13 @@ Built simulation snapshot tb_decoder_riscv_obf_behav
   **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
-source C:/Users/12345/Desktop/APS/APS/APS_PREF_VERSION/APS_PREF_VERSION.sim/sim_1/behav/xsim/xsim.dir/tb_decoder_riscv_obf_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'C:/Users/12345/Desktop/APS/APS/APS_PREF_VERSION/APS_PREF_VERSION.sim/sim_1/behav/xsim/xsim.dir/tb_decoder_riscv_obf_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun Nov  6 19:37:11 2022. For additional details about this file, please refer to the WebTalk help file at D:/Vivado_miet/Vivado/2019.1/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Sun Nov  6 19:37:11 2022...
-run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 711.383 ; gain = 0.000
-INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+source C:/Users/12345/Desktop/APS/APS_save_project/APS_save_project.sim/sim_1/behav/xsim/xsim.dir/tb_decoder_riscv_obf_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/12345/Desktop/APS/APS_save_project/APS_save_project.sim/sim_1/behav/xsim/xsim.dir/tb_decoder_riscv_obf_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun Nov  6 16:10:24 2022. For additional details about this file, please refer to the WebTalk help file at D:/Vivado_miet/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sun Nov  6 16:10:24 2022...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 785.902 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/12345/Desktop/APS/APS/APS_PREF_VERSION/APS_PREF_VERSION.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/12345/Desktop/APS/APS_save_project/APS_save_project.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
    with args "tb_decoder_riscv_obf_behav -key {Behavioral:sim_1:Functional:tb_decoder_riscv_obf} -tclbatch {tb_decoder_riscv_obf.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
@@ -158,9 +172,4 @@ Output 'illegal_instr_o' is incorrect, instruction: e9478f83, time: 385.00 ns
 Output 'illegal_instr_o' is incorrect, instruction: 6c97c283, time: 393.00 ns
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_decoder_riscv_obf_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 719.262 ; gain = 7.879
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-close_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 737.172 ; gain = 0.000
-exit
-INFO: [Common 17-206] Exiting Vivado at Sun Nov  6 19:37:38 2022...
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 815.160 ; gain = 29.258

@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../APS.srcs/sources_1/new/REG_FILE.sv" \
+"../../../../APS.srcs/sources_1/new/irom.sv" \
+"../../../../APS.srcs/sources_1/new/processor.sv" \
+"../../../../APS.srcs/sources_1/new/top.sv" \
+"../../../../APS.srcs/sim_1/new/process_bench.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
