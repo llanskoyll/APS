@@ -3,8 +3,6 @@
   <File Type="PA-TCL" Name="Lab2.tcl"/>
   <File Type="REPORTS-TCL" Name="Lab2_reports.tcl"/>
   <File Type="RDS-RDS" Name="Lab2.vds"/>
-  <File Type="RDS-UTIL" Name="Lab2_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="Lab2_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="Lab2.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>

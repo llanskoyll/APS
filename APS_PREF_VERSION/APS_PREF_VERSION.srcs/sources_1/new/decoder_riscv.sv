@@ -20,22 +20,36 @@ package ALUOpsDecode;
     BLTU = 5'b11110,
     BGEU = 5'b11111
 } Ops;
+    enum logic[6:0] {
+    LOAD_OPCODE =  7'b0000011,
+    MISC_MEM_OPCODE = 7'b0001111,    
+    OP_IMM_OPCODE = 7'b0010011,
+    AUIPC_OPCODE = 7'b0010111,
+    STORE_OPCODE = 7'b0100011,
+    OP_OPCODE = 7'b0110011,
+    LUI_OPCODE = 7'b0110111,
+    BRANCH_OPCODE = 7'b1100011,   
+    JALR_OPCODE = 7'b1100111, 
+    JAL_OPCODE = 7'b1101111,
+    SYSTEM_OPCODE = 7'b1110011
+    } OpcodeS;
 endpackage
+
 
 module decoder_riscv(
   input       [31:0]  fetched_instr_i, // Инструкция для декодирования, считанная из памяти инструкций
-  output  reg [1:0]   ex_op_a_sel_o, // Управляющий сигнал мультиплексора для выбора первого операнда АЛУ
-  output  reg [2:0]   ex_op_b_sel_o, // Управляющий сигнал мультиплексора для выбора второго операнда АЛУ
-  output  reg [4:0]   alu_op_o, // Операция АЛУ
-  output  reg         mem_req_o,// Запрос на доступ к памяти (часть интерфейса памяти)
-  output  reg         mem_we_o, // Сигнал разрешения записи в память, «write enable» (при равенстве нулю происходит чтение)
-  output  reg [2:0]   mem_size_o, // Управляющий сигнал для выбора размера слова при чтении-записи в память (часть интерфейса памяти)
-  output  reg         gpr_we_a_o, // Сигнал разрешения записи в регистровый файл
-  output  reg         wb_src_sel_o,// Управляющий сигнал мультиплексора для выбора данных, записываемых в регистровый файл
-  output  reg         illegal_instr_o,// Сигнал о некорректной инструкции (на схеме не отмечен)
-  output  reg         branch_o, //Сигнал об инструкции условного перехода
-  output  reg         jal_o, // Сигнал об инструкции безусловного перехода jal
-  output  reg         jalr_o // Сигнал об инструкции безусловного перехода jalr
+  output  logic [1:0]   ex_op_a_sel_o, // Управляющий сигнал мультиплексора для выбора первого операнда АЛУ
+  output  logic [2:0]   ex_op_b_sel_o, // Управляющий сигнал мультиплексора для выбора второго операнда АЛУ
+  output  logic [4:0]   alu_op_o, // Операция АЛУ
+  output  logic         mem_req_o,// Запрос на доступ к памяти (часть интерфейса памяти)
+  output  logic         mem_we_o, // Сигнал разрешения записи в память, «write enable» (при равенстве нулю происходит чтение)
+  output  logic [2:0]   mem_size_o, // Управляющий сигнал для выбора размера слова при чтении-записи в память (часть интерфейса памяти)
+  output  logic         gpr_we_a_o, // Сигнал разрешения записи в регистровый файл
+  output  logic         wb_src_sel_o,// Управляющий сигнал мультиплексора для выбора данных, записываемых в регистровый файл
+  output  logic         illegal_instr_o,// Сигнал о некорректной инструкции (на схеме не отмечен)
+  output  logic         branch_o, //Сигнал об инструкции условного перехода
+  output  logic         jal_o, // Сигнал об инструкции безусловного перехода jal
+  output  logic         jalr_o // Сигнал об инструкции безусловного перехода jalr
   );
 
 import ALUOpsDecode::*;
@@ -57,30 +71,30 @@ assign func7 = fetched_instr_i[31:25];
 
 always_comb begin
     case(opcode)
-        7'b0001111: begin
+         MISC_MEM_OPCODE : begin
             illegal_instr_o <= 0;
             mem_req_o <= 0;
             gpr_we_a_o <= 0;
         end
 
-        7'b0110011: begin   // R options
+         OP_OPCODE : begin   // R options
                case(func7)
                    7'h00:
                         case(func3)
-                              3'h0: alu_op_o      <= ADD;
-                              3'h4: alu_op_o      <= XXOR;
-                              3'h6: alu_op_o      <= OOR;  
-                              3'h7: alu_op_o      <= AAND;    
-                              3'h1: alu_op_o      <= SLL;
-                              3'h5: alu_op_o      <= SRL;
-                              3'h2: alu_op_o      <= SLT;
-                              3'h3: alu_op_o      <= SLTU;
+                              3'h0: begin alu_op_o      <= ADD;  illegal_instr_o <= 0; end
+                              3'h4: begin alu_op_o      <= XXOR; illegal_instr_o <= 0; end
+                              3'h6: begin alu_op_o      <= OOR;  illegal_instr_o <= 0; end
+                              3'h7: begin alu_op_o      <= AAND; illegal_instr_o <= 0; end   
+                              3'h1: begin alu_op_o      <= SLL;  illegal_instr_o <= 0; end
+                              3'h5: begin alu_op_o      <= SRL;  illegal_instr_o <= 0; end
+                              3'h2: begin alu_op_o      <= SLT;  illegal_instr_o <= 0; end
+                              3'h3: begin alu_op_o      <= SLTU; illegal_instr_o <= 0; end
                               default: illegal_instr_o <= 1;
                         endcase
                    7'h20:
                         case(func3)
-                              3'h0: alu_op_o      <= SUB;
-                              3'h5: alu_op_o      <= SRA;
+                              3'h0: begin alu_op_o      <= SUB; illegal_instr_o <= 0; end 
+                              3'h5: begin alu_op_o      <= SRA; illegal_instr_o <= 0; end 
                               default: illegal_instr_o <= 1;
                         endcase
                    default: illegal_instr_o <= 1;
@@ -96,12 +110,12 @@ always_comb begin
                jal_o           <= 0;
                jalr_o          <= 0;
           end
-          7'b0010011: begin // I options
+          OP_IMM_OPCODE: begin // I options
                 case(func7)
                    7'h00:
                         case(func3)
-                              3'h1: alu_op_o      <= SLL;
-                              3'h5: alu_op_o      <= SRL;
+                              3'h1: begin alu_op_o      <= SLL; illegal_instr_o <= 0; end
+                              3'h5: begin alu_op_o      <= SRL; illegal_instr_o <= 0; end
                               default: illegal_instr_o <= 1;
                         endcase
                         
@@ -113,12 +127,12 @@ always_comb begin
                    
                    default:
                         case(func3)
-                              3'h0: alu_op_o      <= ADD;  
-                              3'h4: alu_op_o      <= XXOR;
-                              3'h6: alu_op_o      <= OOR;
-                              3'h7: alu_op_o      <= AAND;
-                              3'h2: alu_op_o      <= SLT;
-                              3'h3: alu_op_o      <= SLTU;
+                              3'h0: begin alu_op_o      <= ADD;  illegal_instr_o <= 0; end
+                              3'h4: begin alu_op_o      <= XXOR; illegal_instr_o <= 0; end
+                              3'h6: begin alu_op_o      <= OOR;  illegal_instr_o <= 0; end
+                              3'h7: begin alu_op_o      <= AAND; illegal_instr_o <= 0; end
+                              3'h2: begin alu_op_o      <= SLT;  illegal_instr_o <= 0; end
+                              3'h3: begin alu_op_o      <= SLTU; illegal_instr_o <= 0; end
                               default: illegal_instr_o <= 1;
                         endcase
                         
@@ -134,15 +148,16 @@ always_comb begin
                jal_o           <= 0;
                jalr_o          <= 0;
           end
-          7'b0000011: begin  // Load from memory
+          LOAD_OPCODE: begin  // Load from memory
                 case(func3)
-                   7'h00: mem_size_o   <= 3'd0;
-                   7'h01: mem_size_o   <= 3'd1;
-                   7'h02: mem_size_o   <= 3'd2;
-                   7'h04: mem_size_o   <= 3'd4;
-                   7'h05: mem_size_o   <= 3'd5;
-                   default: illegal_instr_o <= 1;
+                   3'h00: begin mem_size_o   <= 3'd0; illegal_instr_o <= 0; end// byte
+                   3'h01: begin mem_size_o   <= 3'd1; illegal_instr_o <= 0; end // // hal
+                   3'h02: begin mem_size_o   <= 3'd2; illegal_instr_o <= 0; end// word
+                   3'h04: begin mem_size_o   <= 3'd4; illegal_instr_o <= 0; end// unsigned byte
+                   3'h05: begin mem_size_o   <= 3'd5; illegal_instr_o <= 0; end// unsigned half
+                   default: begin illegal_instr_o <= 1; mem_size_o <= 3'b0; end
                 endcase
+               
                gpr_we_a_o      <= 1;
                ex_op_a_sel_o   <= 0;
                ex_op_b_sel_o   <= 1;
@@ -154,12 +169,12 @@ always_comb begin
                jal_o           <= 0;
                jalr_o          <= 0;
           end
-          7'b0100011: begin // Save to memory
+          STORE_OPCODE: begin // Save to memory
                 case(func3)
-                   7'h00: mem_size_o   <= 3'd0;
-                   7'h01: mem_size_o   <= 3'd1;
-                   7'h02: mem_size_o   <= 3'd2;
-                   default: illegal_instr_o <= 1;
+                   3'h00: begin mem_size_o   <= 3'd0; illegal_instr_o <= 0; end
+                   3'h01: begin mem_size_o   <= 3'd1; illegal_instr_o <= 0; end
+                   3'h02: begin mem_size_o   <= 3'd2; illegal_instr_o <= 0; end
+                   default: begin mem_size_o <= 0; illegal_instr_o <= 1;end
                 endcase
                gpr_we_a_o      <= 0;
                ex_op_a_sel_o   <= 0;
@@ -172,14 +187,14 @@ always_comb begin
                jal_o           <= 0;
                jalr_o          <= 0;
           end
-           7'b1100011: begin  // Branches (B-operations)
+           BRANCH_OPCODE: begin  // Branches (B-operations)
                 case(func3)
-                   7'h00: alu_op_o      <= BEQ;
-                   7'h01: alu_op_o      <= BNE;
-                   7'h04: alu_op_o      <= BLT;
-                   7'h05: alu_op_o      <= BGE;
-                   7'h06: alu_op_o      <= BLTU;
-                   7'h07: alu_op_o      <= BGEU;
+                   3'h00: begin alu_op_o      <= BEQ;  illegal_instr_o <= 0; end
+                   3'h01: begin alu_op_o      <= BNE;  illegal_instr_o <= 0; end
+                   3'h04: begin alu_op_o      <= BLT;  illegal_instr_o <= 0; end
+                   3'h05: begin alu_op_o      <= BGE;  illegal_instr_o <= 0; end
+                   3'h06: begin alu_op_o      <= BLTU; illegal_instr_o <= 0; end
+                   3'h07: begin alu_op_o      <= BGEU; illegal_instr_o <= 0; end
                    default: illegal_instr_o <= 1;
                 endcase
                gpr_we_a_o      <= 0;
@@ -193,7 +208,7 @@ always_comb begin
                jal_o           <= 0;
                jalr_o          <= 0;
           end
-          7'b1101111: begin  // Jump and Link
+          JAL_OPCODE: begin  // Jump and Link
                gpr_we_a_o      <= 1;
                ex_op_a_sel_o   <= 1;
                ex_op_b_sel_o   <= 4;
@@ -207,9 +222,9 @@ always_comb begin
                jalr_o          <= 0;
                illegal_instr_o <= 0;
           end
-          7'b1100111: begin                         // Jump and Link Register       
+          JALR_OPCODE: begin                         // Jump and Link Register       
                case(func3)
-                   3'h00:   illegal_instr_o <= 0;
+                   3'h00: illegal_instr_o <= 0;
                    default: illegal_instr_o <= 1;
                 endcase
                gpr_we_a_o      <= 1;
@@ -224,7 +239,7 @@ always_comb begin
                jal_o           <= 0;
                jalr_o          <= 1;
           end
-          7'b0110111: begin // LUI - operation
+          LUI_OPCODE: begin // LUI - operation
                gpr_we_a_o      <= 1;
                ex_op_a_sel_o   <= 2;
                ex_op_b_sel_o   <= 2;
@@ -238,7 +253,7 @@ always_comb begin
                jalr_o          <= 0;
                illegal_instr_o <= 0;
           end
-          7'b0010111: begin  // AUIPC
+          AUIPC_OPCODE: begin  // AUIPC
                gpr_we_a_o      <= 1;
                ex_op_a_sel_o   <= 1;
                ex_op_b_sel_o   <= 2;
@@ -252,7 +267,7 @@ always_comb begin
                jalr_o          <= 0;
                illegal_instr_o <= 0;
           end
-          7'b1110011: begin  // no OPS
+          SYSTEM_OPCODE: begin  // no OPS
                gpr_we_a_o      <= 0;
                ex_op_a_sel_o   <= 0;
                ex_op_b_sel_o   <= 0;
