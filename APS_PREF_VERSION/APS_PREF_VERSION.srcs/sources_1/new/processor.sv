@@ -1,10 +1,8 @@
 `timescale 1ns / 1ps
 
 module processor(
-    input           clk,
-    input           rst,
-    input [31:0]    IN,
-    output [31:0]   OUT
+    input               clk,
+    input               rst
     );
     
     logic [31:0]    instruct;
@@ -26,7 +24,7 @@ module processor(
     .RD1(oper1),
     .RD2(oper2)    
     );
-    
+
     ALU alu(
     .A(oper1),
     .B(oper2),
@@ -41,6 +39,34 @@ module processor(
         .D(instruct)
     );
     
+    logic [1:0]   ex_op_a_sel;
+    logic [2:0]   ex_op_b_sel; // Управляющий сигнал мультиплексора для выбора второго операнда АЛУ
+    logic [4:0]   alu_op; // Операция АЛУ
+    logic         mem_req;// Запрос на доступ к памяти (часть интерфейса памяти)
+    logic         mem_we; // Сигнал разрешения записи в память, «write enable» (при равенстве нулю происходит чтение)
+    logic [2:0]   mem_size; // Управляющий сигнал для выбора размера слова при чтении-записи в память (часть интерфейса памяти)
+    logic         gpr_we_a; // Сигнал разрешения записи в регистровый файл
+    logic         wb_src_sel;// Управляющий сигнал мультиплексора для выбора данных, записываемых в регистровый файл
+    logic         illegal_instr;// Сигнал о некорректной инструкции (на схеме не отмечен)
+    logic         branch; //Сигнал об инструкции условного перехода
+    logic         jal; // Сигнал об инструкции безусловного перехода jal
+    logic         jalr; // Сигнал об инструкции безусловного перехода jalr
+    
+    decoder_riscv decoder_risc(
+        .fetched_instr_i(instruct),
+        .ex_op_a_sel_o(ex_op_a_sel),
+        .ex_op_b_sel_o(ex_op_b_sel),
+        .alu_op_o(alu_op),
+        .mem_req_o(mem_req),
+        .mem_we_o(mem_we),
+        .mem_size_o(mem_size),
+        .gpr_we_a_o(gpr_we_a),
+        .wb_src_sel_o(wb_src_sel),
+        .illegal_instr_o(illegal_instr),
+        .branch_o(branch),
+        .jal_o(jal),
+        .jalr_o(jalr)
+    );
     always_comb begin
         case(instruct[29:28])
             2'd1: writeData <= IN;

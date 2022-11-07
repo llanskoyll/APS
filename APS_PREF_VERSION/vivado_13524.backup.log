@@ -1,0 +1,81 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Nov  7 16:49:10 2022
+# Process ID: 13524
+# Current directory: C:/Users/8200464.SIPC/Desktop/APS/APS_PREF_VERSION
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5488 C:\Users\8200464.SIPC\Desktop\APS\APS_PREF_VERSION\APS_PREF_VERSION.xpr
+# Log file: C:/Users/8200464.SIPC/Desktop/APS/APS_PREF_VERSION/vivado.log
+# Journal file: C:/Users/8200464.SIPC/Desktop/APS/APS_PREF_VERSION\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/8200464.SIPC/Desktop/APS/APS_PREF_VERSION/APS_PREF_VERSION.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 949.383 ; gain = 310.691
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/8200464.SIPC/Desktop/APS/APS_PREF_VERSION/APS_PREF_VERSION.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_decoder_riscv_obf' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/8200464.SIPC/Desktop/APS/APS_PREF_VERSION/APS_PREF_VERSION.sim/sim_1/behav/xsim/irom.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/8200464.SIPC/Desktop/APS/APS_PREF_VERSION/APS_PREF_VERSION.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_decoder_riscv_obf_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/8200464.SIPC/Desktop/APS/APS_PREF_VERSION/APS_PREF_VERSION.srcs/sources_1/new/decoder_riscv.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder_riscv
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/8200464.SIPC/Desktop/APS/APS_PREF_VERSION/APS_PREF_VERSION.sim/sim_1/behav/xsim'
+"xelab -wto 780a3f72d4884027aec0f02d56888b1b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_decoder_riscv_obf_behav xil_defaultlib.tb_decoder_riscv_obf xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 780a3f72d4884027aec0f02d56888b1b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_decoder_riscv_obf_behav xil_defaultlib.tb_decoder_riscv_obf xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.ALUOpsDecode
+Compiling module xil_defaultlib.decoder_riscv
+Compiling module xil_defaultlib.tb_decoder_riscv_obf
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_decoder_riscv_obf_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/8200464.SIPC/Desktop/APS/APS_PREF_VERSION/APS_PREF_VERSION.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_decoder_riscv_obf_behav -key {Behavioral:sim_1:Functional:tb_decoder_riscv_obf} -tclbatch {tb_decoder_riscv_obf.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_decoder_riscv_obf.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_decoder_riscv_obf_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1024.195 ; gain = 23.277
+run all
+SUCCESS!
+$finish called at time : 12800 ns : File "C:/Users/8200464.SIPC/Desktop/APS/APS_PREF_VERSION/APS_PREF_VERSION.srcs/sim_1/new/tb_decoder_riscv_obf.v" Line 243
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Nov  7 16:50:48 2022...

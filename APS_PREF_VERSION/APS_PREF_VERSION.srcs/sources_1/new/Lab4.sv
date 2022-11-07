@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 24.10.2022 14:59:36
+// Create Date: 07.11.2022 17:12:24
 // Design Name: 
-// Module Name: Lab2
+// Module Name: Lab4
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,11 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module Lab2(
-    input CLK100MHZ,
-    input [15:0] SW,
-    input CPU_RESETN,
-    output [15:0] LED
-    );
-    logic [15:0] temp;
-    endmodule
+module Lab4(
+
+);
+
+endmodule
