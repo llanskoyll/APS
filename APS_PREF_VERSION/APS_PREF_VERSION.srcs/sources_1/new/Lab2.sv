@@ -27,4 +27,4 @@ module Lab2(
     output [15:0] LED
     );
     logic [15:0] temp;
-    endmodule
+endmodule

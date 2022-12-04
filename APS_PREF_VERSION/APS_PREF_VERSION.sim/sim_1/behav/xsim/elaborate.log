@@ -1,8 +1,20 @@
-Vivado Simulator 2019.2
+Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 780a3f72d4884027aec0f02d56888b1b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_decoder_riscv_obf_behav xil_defaultlib.tb_decoder_riscv_obf xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Vivado_miet/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 780a3f72d4884027aec0f02d56888b1b --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot process_bench_behav xil_defaultlib.process_bench xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-Pass Through NonSizing Optimizer
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.ALUOpsDecode
+Compiling package xil_defaultlib.ALUOps
+Compiling module xil_defaultlib.instr_memory
+Compiling module xil_defaultlib.decoder_riscv
+Compiling module xil_defaultlib.REG_FILE
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.DataMemory
+Compiling module xil_defaultlib.processor
+Compiling module xil_defaultlib.process_bench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot process_bench_behav

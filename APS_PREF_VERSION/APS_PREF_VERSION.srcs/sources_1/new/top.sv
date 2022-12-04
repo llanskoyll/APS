@@ -33,11 +33,11 @@ module ALU #(parameter N=32)(
 always_comb begin : ALU
     case(ALUControl[4:0])
         SUM : begin
-        Result = A + (ALUControl[3] ? ~B : B);
+        Result = $signed(A) + $signed(B);
         Flag = 0;
         end
         SUB : begin 
-        Result = A - B;
+        Result = $signed(A) - $signed(B);
         Flag = 0;
         end
         SLL : begin 

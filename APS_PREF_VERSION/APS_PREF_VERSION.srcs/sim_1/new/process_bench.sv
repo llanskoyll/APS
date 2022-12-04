@@ -35,18 +35,16 @@ end
 
 processor dut(
     .clk(clk),
-    .rst(rst),
-    .OUT(out),
-    .IN(in)
+    .rst(rst)
 );
 
 
 initial begin
     in = 32'd4;
     rst = 0;
-    #100;
+    #1000;
     rst = 1;
-    #300
+    #200
     rst = 0;
 end
 

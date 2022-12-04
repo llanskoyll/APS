@@ -1,10 +1,12 @@
 # compile verilog/system verilog design source files
 sv xil_defaultlib  \
-"../../../../APS.srcs/sources_1/new/REG_FILE.sv" \
-"../../../../APS.srcs/sources_1/new/irom.sv" \
-"../../../../APS.srcs/sources_1/new/processor.sv" \
-"../../../../APS.srcs/sources_1/new/top.sv" \
-"../../../../APS.srcs/sim_1/new/process_bench.sv" \
+"../../../../APS_PREF_VERSION.srcs/sources_1/new/DM.sv" \
+"../../../../APS_PREF_VERSION.srcs/sources_1/new/REG_FILE.sv" \
+"../../../../APS_PREF_VERSION.srcs/sources_1/new/decoder_riscv.sv" \
+"../../../../APS_PREF_VERSION.srcs/sources_1/new/irom.sv" \
+"../../../../APS_PREF_VERSION.srcs/sources_1/new/processor.sv" \
+"../../../../APS_PREF_VERSION.srcs/sources_1/new/top.sv" \
+"../../../../APS_PREF_VERSION.srcs/sim_1/new/process_bench.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

@@ -10,9 +10,7 @@
 /*  \___\/\___\                                                       */
 /**********************************************************************/
 
-#if defined(_WIN32)
- #include "stdio.h"
-#endif
+
 #include "iki.h"
 #include <string.h>
 #include <math.h>
@@ -34,9 +32,7 @@
 /*  \___\/\___\                                                       */
 /**********************************************************************/
 
-#if defined(_WIN32)
- #include "stdio.h"
-#endif
+
 #include "iki.h"
 #include <string.h>
 #include <math.h>
@@ -117,9 +113,7 @@ void sensitize(char *);
 void simulate(char *);
 
 extern SYSTEMCLIB_IMP_DLLSPEC void local_register_implicit_channel(int, char*);
-extern void implicit_HDL_SCinstantiate();
-
-extern void implicit_HDL_SCcleanup();
+extern void implicit_HDL_SCinstatiate();
 
 extern SYSTEMCLIB_IMP_DLLSPEC int xsim_argc_copy ;
 extern SYSTEMCLIB_IMP_DLLSPEC char** xsim_argv_copy ;
